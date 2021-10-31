@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+.nav1 {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    height: 9000px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: hidden;
+}
+
+
+.container {
+    margin: 0 auto;
+    
+}
+
+/* スクロールボタン */
+.toTopAnime {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    background: MediumAquamarine;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 100px;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.show2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#toTop {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Kaisei Opti', serif;
+    transform: translateY(15%);
+}
+
+
+/* ヘッダー */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header > .container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: lightskyblue;
+}
+
+/* 上部ロゴ */
+.area_logo_header {
+    display: flex;
+    align-items: center;
+}
+
+.area_logo_header img {
+    height: 35px;
+    vertical-align: bottom;
+    padding-left: 50px;
+}
+
+.area_logo_header p {
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: .1em;
+    color: #fff;
+}
+
+/* ヘッダーナビ */
+.nav_header {
+    margin: 0 0 0 auto;
+    
+}
+
+.list_nav_header {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.list_nav_header > li {
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: .3em;
+}
+
+
+/* トップビュー */
+.area_top_view {
+    
+    background-image: url(img/top5.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.area_top_view > .container {
+    
+    height: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* エリア_ホーム */
+[class*="area_home"] {
+    padding: 80px 0;
+}
+
+
+/* ヘッド */
+.head_home {
+    display: flex;
+    justify-content: center;
+}
+
+.head_home .ttl {
+    font-family: 'Kaisei Opti', serif;
+    color: lightskyblue;
+    font-size: 70px;
+    margin: 50px 0;
+}
+/* ボディ */
+.body_home {
+    font-family: 'Kaisei Opti', serif;
+    color: lightskyblue;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+    text-align: center;
+}
+
+.animetarget { 
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 2s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2分割レイアウト */
+.layout_2_div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0 60px 0;
+    justify-content: center;   
+}
+
+.layout_2_div_r {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin: 50px 0 60px 0;
+    justify-content: center;   
+}
+
+
+
+/* テキスト　ホーム */
+.text_home {
+    text-align: center;
+    z-index: 3;
+    padding: 0 40px 0 40px;
+}
+.text_home .ttl {
+    font-family: 'Kaisei Opti', serif;
+    color: lightskyblue;
+    font-size: 50px;
+    margin: 100px 0 80px 0;
+}
+
+.text_home .discription {
+    font-family: 'Kaisei Opti', serif;
+    color: lightskyblue;
+    font-size: 30px;
+    margin: 50px 0;
+}
+
+/* フット＿ホーム */
+.hoot_home {
+    display: flex;
+  justify-content: center;
+}
+
+.gazou {
+        width: 50%;
+        text-align: center;    
+        margin: 80px 40px 80px 40px; 
+        
+}
+
+.gazou > img {
+    width: 100%;
+    
+} 
+
+
+.gazou1 {
+    top: 10%;
+    background-color: MediumAquamarine;
+    right: 10%;
+    width: 180px;
+    height:180px;
+    
+    font-size: 20px;
+    color: #fff;
+    border-radius: 100px;
+    font-family: 'Kaisei Opti', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gazou2 {
+    background-color: lightskyblue;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    align-self: flex-end;
+}
+/* 住人紹介 */
+.img_left {
+    width: 800px;
+    min-width: 700px;
+    text-align: center;
+}
+
+.img_left > img {
+    position: relative;
+    width: 90%;
+    z-index: 3;
+}
+
+
+.wave1 {
+    position: relative;
+
+    z-index: 2;
+    bottom: 350px;
+}
+
+.wave2 {
+    position: relative;
+
+    z-index: 2;
+    bottom: 320px;
+}
+
+/* 道具 */
+.area_home_tools {
+    background-color: lightskyblue;
+}
+
+.list_tools {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.list_tools > li {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.list_tools > li > img {
+    width: 200px;
+}
+
+.list_tools > li > h3 {
+    color: #fff;
+    font-family: 'Kaisei Opti', serif;
+    font-size: 40px;
+    margin: 50px 0;
+}
+
+.list_tools > li > p {
+    color: #fff;
+    width: 400px;
+    font-size: 20px;
+}
+
+.ttl2 {
+    font-family: 'Kaisei Opti', serif;
+    color: #fff;
+    font-size: 50px;
+
+}
+
+.tools { 
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 2s;
+}
+
+.start {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* お問い合わせ */
+.list_nav_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button {   
+    color: #fff;
+    background-color: lightskyblue;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0 20px 50px 20px;
+   
+}
+
+.footer_header {
+    font-family: 'Kaisei Opti', serif;
+    color: lightskyblue;
+    font-size: 50px;
+    margin: 100px 0 80px 0;
+}
+
+
+
+
+
+
