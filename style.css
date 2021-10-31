@@ -60,16 +60,18 @@ header {
 }
 
 header > .container {
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     background-color: lightskyblue;
+    flex-wrap: wrap;
 }
 
 /* 上部ロゴ */
 .area_logo_header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .area_logo_header img {
@@ -89,6 +91,10 @@ header > .container {
 /* ヘッダーナビ */
 .nav_header {
     margin: 0 0 0 auto;
+    background-color: lightskyblue;
+    height: 60px;
+    display: flex;
+    align-items: center;
     
 }
 
@@ -96,6 +102,7 @@ header > .container {
     display: flex;
     align-items: center;
     padding-right: 50px;
+    flex-wrap: wrap;
 }
 
 .list_nav_header > li {
@@ -154,6 +161,8 @@ header > .container {
     justify-content: center;
     line-height: 2;
     text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .animetarget { 
@@ -172,7 +181,7 @@ header > .container {
 .layout_2_div {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px 0 60px 0;
+    margin: 50px 30px 60px 30px;
     justify-content: center;   
 }
 
@@ -180,9 +189,10 @@ header > .container {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    margin: 50px 0 60px 0;
+    margin: 50px 30px 60px 30px;
     justify-content: center;   
 }
+
 
 
 
@@ -287,6 +297,7 @@ header > .container {
     display: flex;
     justify-content: center;
     align-items: center;
+     flex-wrap: wrap;
 }
 
 
@@ -294,9 +305,11 @@ header > .container {
 .list_tools > li {
     width: 28%;
     display: flex;
+   
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 500px;
 }
 
 
@@ -316,6 +329,7 @@ header > .container {
     color: #fff;
     width: 400px;
     font-size: 20px;
+    padding-bottom: 50px;
 }
 
 .ttl2 {
