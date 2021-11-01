@@ -135,6 +135,38 @@
       }
 }
 
+@keyframes logoActive {
+    0% {
+        transform:translate(0, 0) rotate(-7deg) scale(15);
+        fill: lightskyblue;  
+        opacity: 1;
+      }
+      50% {
+        transform:translate(0, 0) rotate(-7deg) scale(11);
+        fill: lightskyblue;  
+        opacity: 1;
+      }
+ 
+      100% {
+        transform:translate(0, 0) rotate(-7deg) scale(1.4);
+        fill: lightskyblue;  
+        opacity: .3;
+      }
+}
+
+.logo.active {
+    position: relative;
+    fill: lightskyblue;
+    right: 5%;
+
+    animation-name: logoActive;
+    animation-duration: 5.3s;
+    animation-timing-function: cubic-bezier();
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+
+}
+
 .logo {
     position: relative;
     fill: lightskyblue;

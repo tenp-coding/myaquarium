@@ -6,7 +6,7 @@
 }
 
 body {
-    height: 9000px;
+    height: 8000px;
     text-align: center;
     margin-left: 0;
     margin-right: 0;
@@ -15,9 +15,55 @@ body {
 
 
 .container {
-    margin: 0 auto;
+    margin: 0 auto; 
+}
+
+/* ローディング画面 */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+ 
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+
+.loading.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loadingView {  
+    opacity: .3;
+    width: 20%;
+}
+
+
+.topword.active {
+    opacity: 0;
+    visibility: hidden;
     
 }
+
+.topword { 
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    transition: .9s;
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /* スクロールボタン */
 .toTopAnime {
@@ -65,10 +111,13 @@ header > .container {
     align-items: center;
     background-color: lightskyblue;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* 上部ロゴ */
 .area_logo_header {
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -90,7 +139,6 @@ header > .container {
 
 /* ヘッダーナビ */
 .nav_header {
-    margin: 0 0 0 auto;
     background-color: lightskyblue;
     height: 60px;
     display: flex;
@@ -115,11 +163,11 @@ header > .container {
 
 /* トップビュー */
 .area_top_view {
-    
     background-image: url(img/top5.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
+    
 }
 
 .area_top_view > .container {
@@ -128,6 +176,11 @@ header > .container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logo {
+    position: relative;
+    width: 20%;
 }
 
 
@@ -181,7 +234,6 @@ header > .container {
 .layout_2_div {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px 30px 60px 30px;
     justify-content: center;   
 }
 
@@ -189,7 +241,6 @@ header > .container {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    margin: 50px 30px 60px 30px;
     justify-content: center;   
 }
 
@@ -260,9 +311,10 @@ header > .container {
 }
 /* 住人紹介 */
 .img_left {
-    width: 800px;
-    min-width: 700px;
+    width: 700px;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .img_left > img {
@@ -274,14 +326,14 @@ header > .container {
 
 .wave1 {
     position: relative;
-
+    width: 100%;
     z-index: 2;
     bottom: 350px;
 }
 
 .wave2 {
     position: relative;
-
+    width: 100%;
     z-index: 2;
     bottom: 320px;
 }
@@ -382,7 +434,648 @@ header > .container {
 }
 
 
+/* レスポンシブ */
+
+@media screen and (max-width:640px) {
+
+    body {
+        height: 5000px;
+        overflow-x: hidden;
+    }
+    /* ヘッダー */
+    header > .container {
+        flex-direction: column;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    .area_logo_header img {
+        padding-left: 0px;
+        height: 15px;
+    }
+    
+    .area_logo_header p {
+        padding-left: 10px;
+        font-size: 10px;
+    }
+
+        /* ヘッダーナビ */
+    .nav_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        
+    }
+
+    .list_nav_header { 
+        padding-right: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .list_nav_header > li {
+        padding: 5px 10px;
+        font-size: 12px;
+        letter-spacing: .2em;
+    }
+        /* スクロールボタン */
+    .toTopAnime {
+        display: none;
+    }
+    .show2 {
+        display: none;
+    }
+    #toTop {
+        display: none;
+    }
+
+/* ローディング画面 */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    margin: 0; 
+    overflow-x: hidden;
+ 
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+
+.loading.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loadingView {  
+    position: relative;
+    opacity: .3;
+    width: 50%;
+}
 
 
 
 
+
+
+        /* トップビュー */
+
+        .area_top_view {
+    
+            background-image: url(img/tops.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;    
+        }
+
+    .area_top_view > .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 120px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+    }
+    
+    
+
+    .logo {
+        position: relative;
+        width: 40%;
+        left: -25%;
+       
+    }
+
+    .topword.active {
+        display: none;
+    }
+
+    .topword { 
+        display: none;
+    }
+
+
+
+/* エリア_ホーム */
+[class*="area_home"] {
+    padding: 50px 0;
+}
+
+
+/* ヘッド */
+.head_home .ttl {
+    font-size: 30px;
+    margin: 50px 20px;
+}
+/* ボディ */
+.body_home {
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* 2分割レイアウト */
+.layout_2_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.layout_2_div_r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+
+/* テキスト　ホーム */
+.text_home {
+    text-align: center;
+    z-index: 3;
+    padding: 0 40px 0 40px;
+}
+.text_home .ttl {
+    font-size: 25px;
+    margin: 50px 0 20px 0;
+}
+
+.text_home .discription {
+    font-size: 17px;
+    margin: 30px 0;
+}
+
+/* フット＿ホーム */
+.hoot_home {
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gazou {
+        width: 80%;  
+        margin: 20px 0 0 0;  
+        padding: 0;   
+}
+
+.gazou1 {
+    background-color: #fff;
+    font-size: 14px;
+    color: MediumAquamarine;
+    font-family: 'Kaisei Opti', serif;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.gazou2 {
+   display: none;
+}
+/* 住人紹介 */
+.img_left {
+    position: relative;
+    width: 300px;
+    text-align: center;
+
+}
+
+.wave1 {
+    position: relative;
+    z-index: 2;
+    bottom: 200px;
+    width: 100%;
+}
+
+.wave2 {
+    position: relative;
+    z-index: 2;
+    bottom: 270px;
+    width: 100%;
+}
+
+/* 道具 */
+
+.list_tools {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.list_tools > li {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+}
+
+.list_tools > li > img {
+    width: 120px;
+}
+
+.list_tools > li > h3 {
+    font-size: 25px;
+    margin: 20px, 10px;
+}
+
+.list_tools > li > p {
+    color: #fff;
+    width: 280px;
+    font-size: 15px;
+    padding-bottom: 50px;
+}
+
+.ttl2 {
+    font-size: 40px;
+}
+
+
+/* お問い合わせ */
+
+.button {   
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin: 0 10px 60px 10px;
+   
+}
+
+.footer_header {
+    font-size: 30px;
+    margin: 30px 0 70px 0;
+}
+
+}
+
+@media screen and (min-width:641px) and (max-width:768px) {
+    body {
+        height: 5000px;
+        overflow-x: hidden;
+    }
+    /* ヘッダー */
+    header > .container {
+  
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+   
+    .area_logo_header img {
+        padding-left: 5px;
+        height: 20px;
+    }
+    
+    .area_logo_header p {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+        /* ヘッダーナビ */
+    .nav_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        
+    }
+
+    .list_nav_header { 
+        padding-right: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .list_nav_header > li {
+        padding: 5px 10px;
+        font-size: 15px;
+        letter-spacing: .1em;
+    }
+        /* スクロールボタン */
+    .toTopAnime {
+        display: none;
+    }
+    .show2 {
+        display: none;
+    }
+    #toTop {
+        display: none;
+    }
+
+/* ローディング画面 */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    margin: 0; 
+    overflow-x: hidden;
+ 
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+
+.loading.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loadingView {  
+    position: relative;
+    opacity: .3;
+    width: 50%;
+}
+
+
+
+
+
+
+        /* トップビュー */
+
+        .area_top_view {
+    
+            background-image: url(img/tops.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;    
+        }
+
+    .area_top_view > .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 120px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+    }
+    
+    
+
+    .logo {
+        position: relative;
+        width: 30%;
+        left: -10%;
+       
+    }
+
+    .topword { 
+        bottom: 15px;
+        left: 45px;
+    }
+
+
+
+/* エリア_ホーム */
+[class*="area_home"] {
+    padding: 50px 0;
+}
+
+
+/* ヘッド */
+.head_home .ttl {
+    font-size: 40px;
+    margin: 50px 20px;
+}
+/* ボディ */
+.body_home {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* 2分割レイアウト */
+.layout_2_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.layout_2_div_r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+
+/* テキスト　ホーム */
+.text_home {
+    text-align: center;
+    z-index: 3;
+    padding: 0 40px 0 40px;
+}
+.text_home .ttl {
+    font-size: 30px;
+    margin: 50px 0 20px 0;
+}
+
+.text_home .discription {
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+/* フット＿ホーム */
+.hoot_home {
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gazou {
+        width: 60%;  
+        margin: 20px 0 0 0;  
+        padding: 0;   
+}
+
+.gazou1 {
+    background-color: #fff;
+    font-size: 14px;
+    color: MediumAquamarine;
+    font-family: 'Kaisei Opti', serif;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.gazou2 {
+   display: none;
+}
+/* 住人紹介 */
+.img_left {
+    position: relative;
+    width: 400px;
+    text-align: center;
+
+}
+
+.wave1 {
+    position: relative;
+    z-index: 2;
+    bottom: 200px;
+    width: 100%;
+}
+
+.wave2 {
+    position: relative;
+    z-index: 2;
+    bottom: 270px;
+    width: 100%;
+}
+
+/* 道具 */
+
+.list_tools {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.list_tools > li {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+.list_tools > li > img {
+    width: 200px;
+}
+
+.list_tools > li > h3 {
+    font-size: 30px;
+    margin: 20px, 10px;
+}
+
+.list_tools > li > p {
+    color: #fff;
+    width: 300px;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.ttl2 {
+    font-size: 50px;
+}
+
+
+/* お問い合わせ */
+
+.button {   
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin: 0 10px 60px 10px;
+   
+}
+
+.footer_header {
+    font-size: 40px;
+    margin: 30px 0 70px 0;
+}
+
+}
+
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+          /* トップビュー */
+
+          .area_top_view {
+    
+            background-image: url(img/tops.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;    
+        }
+
+    .area_top_view > .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 120px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+    }
+    
+    
+
+    .logo {
+        position: relative;
+        width: 30%;
+        left: -10%;
+       
+    }
+
+    .topword { 
+        bottom: 15px;
+        left: 45px;
+    }
+
+
+
+          /* スクロールボタン */
+          .toTopAnime {
+            display: none;
+        }
+        .show2 {
+            display: none;
+        }
+        #toTop {
+            display: none;
+        }
+}

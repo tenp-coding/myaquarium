@@ -1,3 +1,21 @@
+window.addEventListener("load", function() {
+  setTimeout(function() {
+    document.getElementById("loading").classList.remove("active");
+  }, 2000)
+})
+
+window.addEventListener("load", function() {
+  setTimeout(function() {
+     document.getElementById("logo").classList.remove("active");
+  }, 5000)
+})
+
+window.addEventListener("load", function() {
+  setTimeout(function() {
+     document.getElementById("topword").classList.remove("active");
+  }, 6000)
+})
+
 const targetElement = document.getElementById("animetarget");
 
 document.addEventListener("scroll", function() {
